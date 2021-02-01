@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.1e50088e.chunk.css",
-    "main.js": "/static/js/main.f10f6db6.chunk.js",
-    "main.js.map": "/static/js/main.f10f6db6.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.2be8c2f2.js",
-    "runtime-main.js.map": "/static/js/runtime-main.2be8c2f2.js.map",
-    "static/js/2.8f744e6d.chunk.js": "/static/js/2.8f744e6d.chunk.js",
-    "static/js/2.8f744e6d.chunk.js.map": "/static/js/2.8f744e6d.chunk.js.map",
-    "static/js/3.c8adc586.chunk.js": "/static/js/3.c8adc586.chunk.js",
-    "static/js/3.c8adc586.chunk.js.map": "/static/js/3.c8adc586.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.1e50088e.chunk.css.map": "/static/css/main.1e50088e.chunk.css.map",
-    "static/js/2.8f744e6d.chunk.js.LICENSE.txt": "/static/js/2.8f744e6d.chunk.js.LICENSE.txt",
-    "static/media/ms_sans_serif.woff2": "/static/media/ms_sans_serif.0348082a.woff2",
-    "static/media/ms_sans_serif_bold.woff2": "/static/media/ms_sans_serif_bold.7fcf57cc.woff2"
+    "main.css": "/qr-code/build/static/css/main.1e50088e.chunk.css",
+    "main.js": "/qr-code/build/static/js/main.f10f6db6.chunk.js",
+    "main.js.map": "/qr-code/build/static/js/main.f10f6db6.chunk.js.map",
+    "runtime-main.js": "/qr-code/build/static/js/runtime-main.dae3c7b9.js",
+    "runtime-main.js.map": "/qr-code/build/static/js/runtime-main.dae3c7b9.js.map",
+    "static/js/2.57113acc.chunk.js": "/qr-code/build/static/js/2.57113acc.chunk.js",
+    "static/js/2.57113acc.chunk.js.map": "/qr-code/build/static/js/2.57113acc.chunk.js.map",
+    "static/js/3.c8adc586.chunk.js": "/qr-code/build/static/js/3.c8adc586.chunk.js",
+    "static/js/3.c8adc586.chunk.js.map": "/qr-code/build/static/js/3.c8adc586.chunk.js.map",
+    "index.html": "/qr-code/build/index.html",
+    "static/css/main.1e50088e.chunk.css.map": "/qr-code/build/static/css/main.1e50088e.chunk.css.map",
+    "static/js/2.57113acc.chunk.js.LICENSE.txt": "/qr-code/build/static/js/2.57113acc.chunk.js.LICENSE.txt",
+    "static/media/ms_sans_serif.woff2": "/qr-code/build/static/media/ms_sans_serif.0348082a.woff2",
+    "static/media/ms_sans_serif_bold.woff2": "/qr-code/build/static/media/ms_sans_serif_bold.7fcf57cc.woff2"
   },
   "entrypoints": [
-    "static/js/runtime-main.2be8c2f2.js",
-    "static/js/2.8f744e6d.chunk.js",
+    "static/js/runtime-main.dae3c7b9.js",
+    "static/js/2.57113acc.chunk.js",
     "static/css/main.1e50088e.chunk.css",
     "static/js/main.f10f6db6.chunk.js"
   ]
