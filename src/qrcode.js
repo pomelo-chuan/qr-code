@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React, { useRef, useState } from 'react';
 import QRCode from 'qrcode';
-import {CopyToClipboard} from 'react-copy-to-clipboard';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 import './qrcode.less';
 
 const protocolList = [
@@ -14,21 +14,28 @@ function QrCode() {
   const [qrcode, setQrcode] = useState();
   const [protocol, setProtocol] = useState('https://');
   const [qrcodeImg, setQrocdeImg] = useState();
+  const canvasEle = useRef(null);
 
   const handleInput = (e) => {
-    const {value} = e.target;
+    const { value } = e.target;
     setQrcode(value);
     generateQrcode()
   };
 
   const generateQrcode = () => {
-    QRCode.toDataURL(protocol + qrcode, function (err, url) {
-      setQrocdeImg(url)
-    });
+    // QRCode.toString(protocol + qrcode, function (err, url) {
+    //   console.log(err, url);
+    //   setQrocdeImg(url)
+    // });
+    console.log(canvasEle)
+    QRCode.toCanvas(canvasEle.current, protocol + qrcode, function (error) {
+      if (error) console.error(error)
+      console.log('success!');
+    })
   }
 
   const handleSelectProtocol = e => {
-    const {value} = e.target;
+    const { value } = e.target;
     setProtocol(value);
     generateQrcode();
   }
@@ -82,32 +89,35 @@ function QrCode() {
       </button>
     </div>
 
-    {(qrcodeImg && qrcode) &&
-    <>
-      <img src={qrcodeImg}/>
 
-      <button
-        onClick={async () => {
-          const base64Response = await fetch(qrcodeImg);
-          const blob = await base64Response.blob();
-          const item = new window.ClipboardItem({"image/png": blob});
-          navigator.clipboard.write([item]);
-        }}
-      >
-        复制二维码
-      </button>
-    </>
+    <canvas ref={canvasEle} style={{ width: '400px', height: '400px' }}></canvas>
+    {(qrcodeImg && qrcode) &&
+      <>
+        {/* <img src={qrcodeImg}/> */}
+
+
+        <button
+          onClick={async () => {
+            const base64Response = await fetch(qrcodeImg);
+            const blob = await base64Response.blob();
+            const item = new window.ClipboardItem({ "image/png": blob });
+            navigator.clipboard.write([item]);
+          }}
+        >
+          复制二维码
+        </button>
+      </>
     }
 
     {qrcode &&
-    <>
-      <p>{protocol + qrcode}</p>
-      <CopyToClipboard text={protocol + qrcode}>
-        <button>
-          复制链接
-        </button>
-      </CopyToClipboard>
-    </>
+      <>
+        <p>{protocol + qrcode}</p>
+        <CopyToClipboard text={protocol + qrcode}>
+          <button>
+            复制链接
+          </button>
+        </CopyToClipboard>
+      </>
     }
   </div>
 }
